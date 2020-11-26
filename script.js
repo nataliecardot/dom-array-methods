@@ -1,6 +1,6 @@
 const main = document.getElementById('main');
 const addUserBtn = document.getElementById('add-user');
-const doubltBtn = document.getElementById('double');
+const doubleBtn = document.getElementById('double');
 const showMillionairesBtn = document.getElementById('show-millionaires');
 const sortBtn = document.getElementById('sort');
 const calculateWealthBtn = document.getElementById('calculate-wealth');
@@ -18,8 +18,6 @@ async function getRandomUser() {
 
   const user = data.results[0];
 
-  console.log(data);
-
   const newUser = {
     name: `${user.name.first} ${user.name.last}`,
     // Math.floor: Largest integer less than or equal to a number
@@ -27,6 +25,15 @@ async function getRandomUser() {
   };
 
   addData(newUser);
+}
+
+// Double money
+function doubleMoney() {
+  data = data.map((user) => {
+    return { ...user, money: user.money * 2 };
+  });
+
+  updateDOM();
 }
 
 // Add new user object to data array
@@ -67,3 +74,4 @@ function formatMoney(number) {
 
 // Event listeners
 addUserBtn.addEventListener('click', getRandomUser);
+doubleBtn.addEventListener('click', doubleMoney);
