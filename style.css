@@ -51,6 +51,7 @@ h2 {
   padding-bottom: 10px;
   display: flex;
   justify-content: space-between;
+  /* Since "Person" is in strong tags, only applies to raw "Wealth" text, removing default bold */
   font-weight: 300;
   margin: 0 0 20px;
 }
