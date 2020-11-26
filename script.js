@@ -59,6 +59,7 @@ function addData(obj) {
 
 // Calculate total wealth of all users
 function calculateWealth() {
+  // reduce() method executes a reducer function on each element of array, producing single output. Accumulator stores accumulated value. Second arg is current value. The 0 passed in is starting value
   const wealth = data.reduce((acc, user) => (acc += user.money), 0);
 
   const wealthEl = document.createElement('div');
