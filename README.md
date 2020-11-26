@@ -1,6 +1,8 @@
 # dom-array-methods
 
-Project for practice with high-order array methods and DOM manipulation
+Project for practice with higher-order array methods and DOM manipulation
+
+_**Higher-order functions** are functions that operate on other functions, either by taking them as arguments or by returning them._
 
 ## Project Specifications
 
